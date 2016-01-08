@@ -1,0 +1,45 @@
+
+{%extends "header.html"%}
+
+{%block body%}
+<div class="container-fluid">
+<div class="row">
+  <div class="col-xs-12 col-lg-4"></div>
+  <div class="col-xs-12 col-lg-4">
+  <table >
+    <caption>Sudoku of the day</caption>
+    <colgroup><col><col><col>
+    <colgroup><col><col><col>
+    <colgroup><col><col><col>
+    <tbody>
+     <tr> <td id="00"></td> <td id="01"></td>  <td id="02"> <td id="03"> <td id="04">  <td id="05"> <td id="06"> <td id="07">  <td id="08">
+     <tr> <td id="10"> <td id="11">  <td id="12"> <td id="13"> <td id="14">  <td id="15"> <td id="16"> <td id="17">  <td id="18">
+     <tr> <td id="20"> <td id="21">  <td id="22"> <td id="23"> <td id="24">  <td id="25"> <td id="26"> <td id="27">  <td id="28">
+    <tbody>
+     <tr> <td id="30"> <td id="31">  <td id="32"> <td id="33"> <td id="34">  <td id="35"> <td id="36"> <td id="37">  <td id="38">
+     <tr> <td id="40"> <td id="41">  <td id="42"> <td id="43"> <td id="44">  <td id="45"> <td id="46"> <td id="47">  <td id="48">
+     <tr> <td id="50"> <td id="51">  <td id="52"> <td id="53"> <td id="54">  <td id="55"> <td id="56"> <td id="57">  <td id="58">
+    <tbody>
+     <tr> <td id="60"> <td id="61">  <td id="62"> <td id="63"> <td id="64">  <td id="65"> <td id="66"> <td id="67">  <td id="68">
+     <tr> <td id="70"> <td id="71">  <td id="72"> <td id="73"> <td id="74">  <td id="75"> <td id="76"> <td id="77">  <td id="78">
+     <tr> <td id="80"> <td id="81">  <td id="82"> <td id="83"> <td id="84">  <td id="85"> <td id="86"> <td id="87">  <td id="88">
+  </table>
+  </div>
+  <div class="col-xs-12 col-lg-4"></div>
+
+</div>
+<!-- 
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> -->
+
+<div class="row">
+  <div class="col-xs-12 col-lg-4"></div>
+  <div class="col-xs-12 col-lg-4">
+   <a class="btn btn-success btn-lg sud" href="/output/" role="button">CLICK TO GO TO SUDOKU SOLVER</a>
+  </div>
+  <div class="col-xs-12 col-lg-4"></div>
+</div>
+
+ <script type="text/javascript" src="{{url_for('static',filename = 'sudjava.js')}}"></script>
+{%endblock%}

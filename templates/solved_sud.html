@@ -1,0 +1,44 @@
+{%extends "header.html"%}
+
+{%block body%}
+<div class="container-fluid">
+	<div class="row">
+     	<div class="col-xs-12 col-lg-4"></div>
+     	<div class="col-xs-12 col-lg-4">
+			<table >
+				  <caption>solution:</caption>
+				  <colgroup><col><col><col>
+				  <colgroup><col><col><col>
+				  <colgroup><col><col><col>
+
+				<tbody>
+					{%for i in lst%}
+					<tr>
+						{%for j in i%}
+							
+				   			<td >{{j}}</td> 
+
+						{%endfor%}
+						
+					{%endfor%}
+
+
+			</table>
+		</div>
+		<div class="col-xs-12 col-lg-4"></div>
+	</div>
+	<div class="row">
+	  <div class="col-xs-12 col-lg-4"></div>
+	  <div class="col-xs-12 col-lg-4">
+	 	  <a class="btn btn-success btn-lg sud" href="/output/" role="button">GO BACK TO SUDOKU SOLVER</a>
+	  </div>
+	  <div class="col-xs-12 col-lg-4"></div>
+	</div>
+
+
+</div>
+
+
+
+
+{%endblock%}
