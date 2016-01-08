@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import render_template,request,flash,url_for,redirect,session
-
+import os
 
 from copy import copy
 
@@ -123,5 +123,6 @@ def solved():
 
 
 if __name__ == '__main__' :
-	app.run(debug=True)
+	port = int(os.environ.get('PORT', 5000))
+	app.run(port=port)
 
