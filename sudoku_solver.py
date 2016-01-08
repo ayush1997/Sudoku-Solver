@@ -78,7 +78,7 @@ def run():
 	
 	if solvesudoku():
 		
-		printsud()
+		#printsud()
 		return grid 
 
 	else:
