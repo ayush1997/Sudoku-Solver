@@ -1,8 +1,6 @@
 from flask import Flask
 from flask import render_template,request,flash,url_for,redirect,session
-from content import *
-from wtforms import Form,BooleanField,TextField,PasswordField,validators
-from passlib.hash import sha256_crypt
+
 
 from copy import copy
 
@@ -43,27 +41,27 @@ def solved():
 			inp = request.form.getlist("num")
 			for i in range(0,81):
 				inp[i] = int(inp[i])
-			print inp
+			#print inp
 			for r in range(0,9):
 				for c in range(0,9):
 					lst[r].append(inp[count])
 					count = count +1
-			print lst
+			#print lst
 			import info
-			print info.grids
+			#print info.grids
 			
 			
 			info.grids = lst
-			print info.grids
+			#print info.grids
 
 			#print info.grids
 			import sudoku_solver 
 			sudoku_solver.grid = lst
-			print info.grids
-			print sudoku_solver.grid
+			#print info.grids
+			#print sudoku_solver.grid
 			sol = sudoku_solver.run()
-			print sol
-			print sudoku_solver.grid
+			#print sol
+			#print sudoku_solver.grid
 		
 			
 			
