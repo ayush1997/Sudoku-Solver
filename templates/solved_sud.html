@@ -1,6 +1,30 @@
 {%extends "header.html"%}
 
 {%block body%}
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+    	{%if message=="NOT SOLVABLE, PLEASE CHECK YOUR INPUT!"%}
+    <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-xs-12 col-lg-12">
+     			 <div class="alert alert-warning" role="alert">{{message}}</div>
+     		</div>
+     	</div>
+     </div>
+     	{%else%}
+      <div class="container-fluid">
+    	<div class="row">
+    		<div class="col-xs-12 col-lg-12">
+     			 <div class="alert alert-success" role="alert">{{message}}</div>
+     		</div>
+     	</div>
+     </div>
+     {%endif%}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
 <div class="container-fluid">
 	<div class="row">
      	<div class="col-xs-12 col-lg-4"></div>

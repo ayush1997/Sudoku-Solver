@@ -9,6 +9,7 @@ from copy import copy
 
 
 app = Flask(__name__)
+app.secret_key = "secret"
 @app.route('/')
 def index():
 	return render_template('index.html')
@@ -59,13 +60,20 @@ def solved():
 			sudoku_solver.grid = lst
 			#print info.grids
 			#print sudoku_solver.grid
+
+			if sudoku_solver.is_sudoku_unsolvable():
+				msg = "NOT SOLVABLE, PLEASE CHECK YOUR INPUT!"
+			else:
+				msg = "THIS SEEMS TO BE ONE OF THE POSSIBLE ANSWERS."
+
+			print msg
 			sol = sudoku_solver.run()
 			#print sol
 			#print sudoku_solver.grid
-		
 			
 			
-
+			
+			flash(msg)
 			return render_template("solved_sud.html",lst=sol,inp = inp)
 
 			#return redirect(url_for("solved",lst = sol,name = 23))
@@ -123,7 +131,7 @@ def solved():
 
 
 if __name__ == '__main__' :
-	port = int(os.environ.get('PORT', 5000))
-	app.run(host='0.0.0.0',port=port)
-	#app.run(debug=True)
+	#port = int(os.environ.get('PORT', 5000))
+	#app.run(host='0.0.0.0',port=port)
+	app.run(debug=True)
 
