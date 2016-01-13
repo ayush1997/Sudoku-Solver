@@ -81,57 +81,10 @@ def solved():
 		print e.message
 
 
-#class Registrationform(Form):
-#	username = TextField("Username",[validators.Length(min=4,max = 20)])
-#	email = TextField("Email address",[validators.Length(min=6,max='50')])
-#	password = PasswordField('Password',[validators.Required(),
-#		validators.EqualTo('confirm',message="wrong ")])
-#	confirm = PasswordField('Repeat password')
-#	accept_tos  = BooleanField("i accept",[validators.Required()])
-
-
-
-#@app.route("/register/",methods = ["GET","POST"])
-#def registerpage():
-#	try:
-#		form = Registrationform(request.form)
-#		if request.method =="POST" and form.validate():
-#			username = form.username.data
-#			email = form.email.data
-#			password = sha256_crypt.encrypt((str(form.password.data)))
-#
-#		return render_template("register.html",form=form)
-#
-#		session["logged_in"] = True
-#		session["username"] = username
-#	except:
-#		pass
-
-
-
-#@app.route("/login/",methods = ['GET','POST'])
-#def login():
-#	error =None
-#	try:
-#		if request.method =="POST":
-#			attem_username = request.form["username"]
-#			attem_password = request.form["password"]
-#			writetext(attem_username)
-#			
-#
-#
-#			if attem_username == "admin" and attem_password =="password":
-#				return redirect(url_for('profile',username = attem_username))
-#			else:
-#				return redirect(url_for("index"))	
-#
-#		return render_template("login.html",error=error)		
-#	except:
-#		return redirect(url_for("aab",username ="asd"))	
 
 
 if __name__ == '__main__' :
-	#port = int(os.environ.get('PORT', 5000))
-	#app.run(host='0.0.0.0',port=port)
-	app.run(debug=True)
+	port = int(os.environ.get('PORT', 5000))
+	app.run(host='0.0.0.0',port=port)
+	#app.run(debug=True)
 
