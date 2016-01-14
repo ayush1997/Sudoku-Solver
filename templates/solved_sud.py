@@ -1,7 +1,0 @@
-{%extends "header.html"%}
-
-{%block body%}
-
-
-
-{%endblock%}
