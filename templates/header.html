@@ -11,6 +11,7 @@
    
     <link href="{{url_for('static',filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
     <link  href="{{url_for('static',filename='font-awesome-4.5.0/css/font-awesome.min.css')}}" rel="stylesheet" >
+    <link href="{{url_for('static',filename = 'cs.css')}}" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC:700|Black+Ops+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
    
@@ -33,10 +34,7 @@
 
   }
 
-  .navbar-default{
-    background-color: #0f0f0a;
-    
-  }
+  
   .active{
     top:0px;
   }
@@ -67,15 +65,19 @@ td { border: solid thin;  width: 38px; text-align: center; padding: 0;height:38p
 input{width:100%;font-size: 20px;}
 
 .sud{
-  position:relative;
-  top:40px;
-  left:5px;
+  
+  padding-top: 20px;
+  padding-left: 0px;
 }
 .but{
-  position: relative;
-  top:30px;
-  width:150px;
-  left:100px;
+  
+  padding-top:30px;
+
+  padding-left:0px;
+}
+.outbut{
+  padding-top: 10px;
+  padding-left: 15px;
 }
 .footer{
   
@@ -120,10 +122,17 @@ input{width:100%;font-size: 20px;}
   width:100vw;
 
 }
-.navbar-fixed-bottom{
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 5px;
+.foot{
+  position: fixed;
+  bottom: 0px;
+  
+}
+.fthdcol{
+
+  background-color: #0f0f0a;
+}
+body{
+  padding-bottom: 70px;
 }
 </style>
 
@@ -135,7 +144,7 @@ input{width:100%;font-size: 20px;}
  
    
  <header>
- <nav class="navbar navbar-default">
+ <nav class="navbar navbar-default fthdcol">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -156,7 +165,7 @@ input{width:100%;font-size: 20px;}
       <ul class="nav navbar-nav navbar-right">
             
             <li ><a href="/" title="HOME"><span class="glyphicon glyphicon-home hm"></span></a></li>
-            <li ><a href="/" title="asa"><span class="glyphicon glyphicon-pencil hm"></span></a></li>
+            <li ><a href="https://github.com/ayush1997/Sudoku-solver" title="SOURCE CODE"><span class="glyphicon glyphicon-pencil hm"></span></a></li>
          
              
         
@@ -173,13 +182,16 @@ input{width:100%;font-size: 20px;}
 
 {%endblock%}
 
-     
-        <nav class="navbar navbar-default navbar-fixed-bottom">
-            <p class="navbar-text pd">DEVELOPED BY:<a href="#">AYUSH (GITHUB)</a></p>
-        </nav>
-     
- 
 
+     
+
+  
+    <nav class="navbar navbar-default navbar-fixed-bottom fthdcol">
+      <div class="container-fluid">
+        <p class="navbar-text pd">DEVELOPED BY:<a href="#">AYUSH (GITHUB)</a></p>
+      </div>
+    </nav>
+  
 
 
 <!-- Modal -->
